@@ -1,0 +1,15 @@
+Replay Memory
+  Used to train DQN
+  Stores transitions agent observes to be reused
+  Random sampling of transitions to form a decorrelated batch to greatly stabilize/improve training
+
+  Two classes
+    Transition:
+      named tuple representing single transition. 
+      maps (state, action) to (next_state, reward) the result
+        state: screen difference imaage
+    ReplayMemory
+      cyclic buffer holding transitions
+      contains sample() method to select random batch of transitions for training
+      
+       
